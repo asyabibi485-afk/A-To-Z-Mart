@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>A To Z Mart | Online Shopping</title>
+
+  <meta
+    name="description"
+    content="A To Z Mart - Fashion, Jewellery, Accessories, Beauty, Clothes and Perfumes."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <div class="logo">
+      <span class="logo-main">A To Z</span>
+      <span class="logo-sub">MART</span>
+    </div>
+
+    <nav class="navigation">
+
+      <a href="#shop">Shop</a>
+
+      <a href="#favorites">
+        Favorites
+        <span id="favoriteCount" class="nav-badge">0</span>
+      </a>
+
+      <button id="cartTopButton" class="nav-cart-button">
+        🛒 Cart
+        <span id="cartCount" class="nav-badge">0</span>
+      </button>
+
+      <a href="#about">About</a>
+
+      <a href="#contact">Contact</a>
+
+      <button id="adminNavButton" class="admin-nav-button">
+        Admin
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="hero-small">
+          WELCOME TO
+        </p>
+
+        <h1>
+          A To Z Mart
+        </h1>
+
+        <h2>
+          Everything You Love, All in One Place
+        </h2>
+
+        <p>
+          Discover fashion, jewellery, accessories, beauty,
+          clothes and perfumes at A To Z Mart.
+        </p>
+
+        <a href="#shop" class="hero-button">
+          Explore Collection
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= SHOP ================= -->
+
+    <section id="shop" class="section">
+
+      <div class="section-heading">
+
+        <p class="section-small">
+          OUR COLLECTION
+        </p>
+
+        <h2>
+          Explore Collection
+        </h2>
+
+        <p>
+          Browse our latest products.
+        </p>
+
+      </div>
+
+
+      <!-- SEARCH + FILTER -->
+
+      <div class="filters">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search products..."
+          autocomplete="off"
+        >
+
+        <select id="categoryFilter">
+
+          <option value="All">
+            All Categories
+          </option>
+
+          <option value="Clothes">
+            Clothes
+          </option>
+
+          <option value="Fashion">
+            Fashion
+          </option>
+
+          <option value="Jewellery">
+            Jewellery
+          </option>
+
+          <option value="Accessories">
+            Accessories
+          </option>
+
+          <option value="Perfume">
+            Perfume
+          </option>
+
+          <option value="Beauty">
+            Beauty
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- PRODUCT GRID -->
+
+      <div id="productGrid" class="product-grid"></div>
+
+
+      <!-- PAGINATION -->
+
+      <div class="pagination">
+
+        <button id="previousButton" class="pagination-button">
+          ← Previous
+        </button>
+
+        <span id="pageIndicator">
+          Page 1 of 4
+        </span>
+
+        <button id="nextButton" class="pagination-button">
+          Next →
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= FAVORITES ================= -->
+
+    <section id="favorites" class="section alternate-section">
+
+      <div class="section-heading">
+
+        <p class="section-small">
+          YOUR SAVED ITEMS
+        </p>
+
+        <h2>
+          Favorites
+        </h2>
+
+        <p>
+          Products you have saved will appear here.
+        </p>
+
+      </div>
+
+      <div id="favoriteGrid" class="product-grid"></div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section">
+
+      <div class="info-card">
+
+        <p class="section-small">
+          ABOUT US
+        </p>
+
+        <h2>
+          About A To Z Mart
+        </h2>
+
+        <p>
+          A To Z Mart is an online shopping store offering
+          fashionable and useful products for everyday life.
+        </p>
+
+        <p>
+          Our collection includes clothes, fashion items,
+          jewellery, accessories, beauty products and perfumes.
+        </p>
+
+        <p>
+          We aim to provide a simple and convenient shopping
+          experience for our customers.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section contact-section">
+
+      <div class="section-heading">
+
+        <p class="section-small">
+          GET IN TOUCH
+        </p>
+
+        <h2>
+          Contact A To Z Mart
+        </h2>
+
+        <p>
+          We would love to hear from you.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+
+          <div class="contact-icon">
+            📞
+          </div>
+
+          <h3>
+            Phone
+          </h3>
+
+          <a href="tel:03169707804">
+            0316-9707804
+          </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <div class="contact-icon">
+            ✉️
+          </div>
+
+          <h3>
+            Email
+          </h3>
+
+          <a href="mailto:asyabibi485@gmail.com">
+            asyabibi485@gmail.com
+          </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+          <div class="contact-icon">
+            🛍️
+          </div>
+
+          <h3>
+            Store
+          </h3>
+
+          <p>
+            A To Z Mart
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= CART DRAWER ================= -->
+
+  <aside id="cartPanel" class="cart-panel">
+
+    <div class="cart-header">
+
+      <h2>
+        Your Cart
+      </h2>
+
+      <button id="closeCartButton" class="close-button">
+        ×
+      </button>
+
+    </div>
+
+
+    <div id="cartItems" class="cart-items">
+
+      <p class="empty-message">
+        Your cart is empty.
+      </p>
+
+    </div>
+
+
+    <div class="cart-footer">
+
+      <div class="cart-total-row">
+
+        <strong>
+          Total
+        </strong>
+
+        <strong id="cartTotal">
+          Rs. 0
+        </strong>
+
+      </div>
+
+      <button id="checkoutBtn" class="checkout-btn">
+        Proceed to Checkout
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <!-- CART OVERLAY -->
+
+  <div id="cartOverlay" class="overlay"></div>
+
+
+  <!-- ================= CHECKOUT MODAL ================= -->
+
+  <div id="checkoutModal" class="modal hidden">
+
+    <div class="modal-content">
+
+      <button
+        id="closeCheckout"
+        class="close-button modal-close"
+        type="button"
+      >
+        ×
+      </button>
+
+      <div class="modal-heading">
+
+        <p class="section-small">
+          COMPLETE YOUR ORDER
+        </p>
+
+        <h2>
+          Checkout
+        </h2>
+
+        <p>
+          Enter your delivery details below.
+        </p>
+
+      </div>
+
+
+      <form id="checkoutForm">
+
+        <label for="customerName">
+          Full Name
+        </label>
+
+        <input
+          type="text"
+          id="customerName"
+          placeholder="Enter your full name"
+          required
+        >
+
+
+        <label for="customerPhone">
+          Phone Number
+        </label>
+
+        <input
+          type="tel"
+          id="customerPhone"
+          placeholder="03XXXXXXXXX"
+          required
+        >
+
+
+        <label for="customerAddress">
+          Delivery Address
+        </label>
+
+        <textarea
+          id="customerAddress"
+          rows="4"
+          placeholder="Enter complete delivery address"
+          required
+        ></textarea>
+
+
+        <div class="checkout-total">
+          <span>
+            Order Total
+          </span>
+
+          <strong id="checkoutTotal">
+            Rs. 0
+          </strong>
+        </div>
+
+
+        <button
+          type="submit"
+          class="checkout-submit"
+        >
+          Place Order
+        </button>
+
+        <p
+          id="checkoutMessage"
+          class="checkout-message"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= ADMIN MODAL ================= -->
+
+  <div id="adminModal" class="modal hidden">
+
+    <div class="modal-content admin-modal">
+
+      <button
+        id="closeAdmin"
+        class="close-button modal-close"
+        type="button"
+      >
+        ×
+      </button>
+
+
+      <div id="adminLoginArea">
+
+        <div class="modal-heading">
+
+          <p class="section-small">
+            ADMIN AREA
+          </p>
+
+          <h2>
+            Admin Login
+          </h2>
+
+          <p>
+            Sign in to view customer orders.
+          </p>
+
+        </div>
+
+
+        <form id="adminLoginForm">
+
+          <label for="adminEmail">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="adminEmail"
+            placeholder="Admin email"
+            required
+          >
+
+
+          <label for="adminPassword">
+            Password
+          </label>
+
+          <input
+            type="password"
+            id="adminPassword"
+            placeholder="Password"
+            required
+          >
+
+
+          <button
+            type="submit"
+            class="checkout-submit"
+          >
+            Login
+          </button>
+
+          <p
+            id="adminLoginMessage"
+            class="checkout-message"
+          ></p>
+
+        </form>
+
+      </div>
+
+
+      <div id="adminDashboard" class="hidden">
+
+        <div class="admin-heading-row">
+
+          <div>
+
+            <p class="section-small">
+              ADMIN DASHBOARD
+            </p>
+
+            <h2>
+              Customer Orders
+            </h2>
+
+          </div>
+
+          <button
+            id="adminLogout"
+            class="logout-button"
+          >
+            Logout
+          </button>
+
+        </div>
+
+
+        <div id="ordersList" class="orders-list">
+
+          <p>
+            Loading orders...
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="footer-brand">
+      A To Z Mart
+    </div>
+
+    <p>
+      Fashion • Jewellery • Beauty • Clothes • Accessories • Perfumes
+    </p>
+
+    <p>
+      © 2026 A To Z Mart. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
